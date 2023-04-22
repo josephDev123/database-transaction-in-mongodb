@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import {Router} from './routers/user_profile_router.js'
-import {dbconnection} from './db.js'
+import {Router} from './routers/user_profile_router.js';
+import {dbconnection} from './db.js';
 
 dotenv.config();
 // dbconnection()
