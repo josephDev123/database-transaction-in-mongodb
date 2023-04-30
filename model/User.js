@@ -8,4 +8,4 @@ const user_schema = new Schema({
 })
 
 //create model
-const user_model = new model('user', user_schema)
+export const User_model = new model('user', user_schema)
