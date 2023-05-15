@@ -1,6 +1,7 @@
 import {PurchaseModel} from '../model/Account.js';
 
 (async function createPurchase(){
+    const number = Math.floor(Math.rand() * 10000)
     const data = {purchaseName:'', amount: '20USD'}
 
     try{

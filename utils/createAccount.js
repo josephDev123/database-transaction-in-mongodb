@@ -1,10 +1,11 @@
 import {AccountModel} from '../model/Account.js';
 
-async function createAccount(){
+(async function createAccount(){
+    const number = Math.floor(Math.rand() * 10000)
     const data = [
-        {name:'user 1', balance: '50USD'},
-        {name:'user 2', balance: '60USD'},
-        {name:'user 3', balance: '70USD'}
+        {name:'user'+number, balance: '50USD'},
+        {name:'user'+number, balance: '60USD'},
+        {name:'user'+number, balance: '70USD'}
     ]
 
     try{
@@ -13,4 +14,4 @@ async function createAccount(){
       }catch(e){
           console.log('account creation fails')
       }
-}
+})*()

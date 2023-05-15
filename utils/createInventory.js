@@ -1,7 +1,7 @@
 import {InventoryModel} from '../model/Account.js';
 
 async function createInventory(){
-
+    const number = Math.floor(Math.rand() * 10000)
     const data = [
         {productName:'Garri', count: 10},
         {productName:'fufu', balance: 15},
