@@ -6,4 +6,4 @@ const PurchaseSchema = mongoose.Schema({
     amount: Number
 }, {timestamp:true});
 
-export const PurchaseModel = mongoose.model('Inventory', PurchaseSchema);
+export const PurchaseModel = mongoose.model('Purchase', PurchaseSchema);

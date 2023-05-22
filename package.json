@@ -6,7 +6,10 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "account": "node ./utils/createAccount.js",
+    "inventory": "node ./utils/createInventory.js",
+    "purchase": "node ./utils/createPurchase.js"
   },
   "author": "Joseph Uzuegbu",
   "license": "ISC",

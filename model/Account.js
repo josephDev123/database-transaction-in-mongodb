@@ -1,9 +1,10 @@
 import mongoose from "mongoose";
+const {Schema} = mongoose
 
 
-const AccountSchema = mongoose.Schema({
+const AccountSchema = new Schema({
     name: String,
     balance: Number
-}, {timestamp:true});
+});
 
-export const AccountModel = mongoose.model('Inventory', AccountSchema);
+export const AccountModel = mongoose.model('Account', AccountSchema);
