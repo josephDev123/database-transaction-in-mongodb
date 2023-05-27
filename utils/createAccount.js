@@ -1,8 +1,10 @@
+import {dbconnection} from '../db.js';
 import {AccountModel} from '../model/Account.js';
 
-(async function createAccount(){
-    
+
+export async function createAccount(){
     try{
+        dbconnection()
         // const number = Math.floor(Math.random() * 10000)
         
         const data = [
@@ -12,10 +14,15 @@ import {AccountModel} from '../model/Account.js';
         ]
         const options = {ordered: true}
     
-        const account = await AccountModel.insertMany(data, options)
+        await AccountModel.insertMany(data, options)
         console.log('account created successfully')
 
-      }catch(e){
-          console.log('account creation fails')
+      }finally{
+        console.log('alway runs')
       }
-})()
+    //   catch(e){
+    //       console.log('account creation fails: '+  e.message)
+    //   }
+}
+
+createAccount().catch((err)=> console.log('account creation fails: '+  err.message))
